@@ -1,3 +1,90 @@
+# Learn Bootstrap Custom
+
+Learning how to customize `Bootstrap@5` https://getbootstrap.com/docs/5.2/getting-started/introduction
+
+## Install
+
+```
+npm i bootstrap@5.2.0
+```
+
+## Set Defaults
+
+`src/style.scss`
+
+```scss
+@import './scss/custom-bootstrap';
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css');
+
+html,
+body,
+#root {
+  font-size: 1rem;
+  height: 100%;
+  // font-family: var(--font-family); // primeflex
+  // background-color: var(--surface-ground); // primeflex
+  // color: var(--text-color); // primeflex
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #eff3f8;
+}
+```
+
+### Custom Bootstrap
+
+https://getbootstrap.com/docs/5.2/customize/sass/
+
+`src/scss/custom-bootstrap.scss`
+
+```scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import '../../node_modules/bootstrap/scss/functions';
+
+// 2. Include any default variable overrides here
+@import './variables';
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import '../../node_modules/bootstrap/scss/variables';
+
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
+@import '../../node_modules/bootstrap/scss/maps';
+@import '../../node_modules/bootstrap/scss/mixins';
+@import '../../node_modules/bootstrap/scss/root';
+
+// 6. Optionally include any other parts as needed
+@import '../../node_modules/bootstrap/scss/utilities';
+@import '../../node_modules/bootstrap/scss/reboot';
+@import '../../node_modules/bootstrap/scss/buttons';
+@import '../../node_modules/bootstrap/scss/containers';
+@import '../../node_modules/bootstrap/scss/grid';
+
+@import '../../node_modules/bootstrap/scss/card';
+@import '../../node_modules/bootstrap/scss/forms/form-control';
+@import '../../node_modules/bootstrap/scss/forms/labels';
+@import '../../node_modules/bootstrap/scss/forms/form-select';
+@import '../../node_modules/bootstrap/scss/badge';
+@import '../../node_modules/bootstrap/scss/helpers/color-bg';
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import '../../node_modules/bootstrap/scss/utilities/api';
+
+// 8. Add additional custom code here
+@import './maps';
+@import './mixins';
+@import './custom-button';
+
+textarea.form-control {
+  resize: none;
+}
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
