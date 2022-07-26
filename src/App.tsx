@@ -1,3 +1,6 @@
+import DropdownField from './components/DropdownField';
+import FavoriteButton from './components/FavoriteButton';
+import InputField from './components/InputField';
 import logo from './logo.svg';
 
 function App() {
@@ -7,60 +10,37 @@ function App() {
         <img src={logo} alt="Sample" className="card-img-top bg-black" height={200} />
         <div className="card-body">
 
-          <button className="btn btn-outline-primary m-auto d-block mb-3">
-            <span className="bi bi-star me-2"></span>
-            Add to Favorites
-          </button>
+          <FavoriteButton>
+            To Favorites
+          </FavoriteButton>
+
+          <FavoriteButton />
 
           <div className="row">
-
             <div className="col-12 col-md-6">
-
-              <div className="mb-3">
-                <label htmlFor="firstname" className="form-label">Firstname</label>
-                <input type="text" className="form-control" id="firstname" />
-              </div>
-
+              <InputField label='Firstname' />
             </div>
-
             <div className="col-12 col-md-6">
-
-              <div className="mb-3">
-                <label htmlFor="lastname" className="form-label">Lastname</label>
-                <input type="text" className="form-control" id="lastname" />
-              </div>
-
+              <InputField label='Lastname' />
             </div>
-
           </div>
 
           <div className="row">
-
-            <div className="mb-3">
-              <label htmlFor="address" className="form-label">Address</label>
-              <textarea className="form-control" id="address" rows={3} />
-            </div>
-
+            <InputField label='Address' type='textarea' />
           </div>
 
           <div className="row mb-3">
 
             <div className="col-md-6 mb-3">
-              <label htmlFor="inputCity" className="form-label">City</label>
-              <input type="text" className="form-control" id="inputCity" />
+              <InputField label='City' />
             </div>
 
             <div className="col-md-4 mb-3">
-              <label htmlFor="inputState" className="form-label">State</label>
-              <select id="inputState" className="form-select" defaultValue='Choose...'>
-                <option>Choose...</option>
-                <option>...</option>
-              </select>
+              <DropdownField label='State' options={['Kerala']} />
             </div>
 
             <div className="col-md-2 mb-3">
-              <label htmlFor="inputZip" className="form-label">Zip</label>
-              <input type="text" className="form-control" id="inputZip" />
+              <InputField label='Zip' />
             </div>
 
           </div>
