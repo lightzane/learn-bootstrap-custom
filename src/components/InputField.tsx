@@ -5,7 +5,7 @@ interface Props {
     type?: string;
 }
 
-const InputField: React.FC<Props> = ({ label, type }) => {
+export const InputField: React.FC<Props> = ({ label, type }) => {
 
     let field: JSX.Element;
 
@@ -24,5 +24,3 @@ const InputField: React.FC<Props> = ({ label, type }) => {
         </div>
     );
 };
-
-export default InputField;

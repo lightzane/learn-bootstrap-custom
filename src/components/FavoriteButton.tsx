@@ -4,7 +4,7 @@ interface Props {
     children?: React.ReactNode;
 }
 
-const FavoriteButton: React.FC<Props> = ({ children }) => {
+export const FavoriteButton: React.FC<Props> = ({ children }) => {
 
     const [active, setActive] = useState(false);
 
@@ -31,5 +31,3 @@ const FavoriteButton: React.FC<Props> = ({ children }) => {
         </button>
     );
 };
-
-export default FavoriteButton;

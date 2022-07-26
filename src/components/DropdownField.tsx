@@ -5,7 +5,7 @@ interface Props {
     options?: string[];
 }
 
-const DropdownField: React.FC<Props> = ({ label, options }) => {
+export const DropdownField: React.FC<Props> = ({ label, options }) => {
     return (
         <>
             <label htmlFor={label.toLowerCase()} className="form-label">{label}</label>
@@ -20,5 +20,3 @@ const DropdownField: React.FC<Props> = ({ label, options }) => {
         </>
     );
 };
-
-export default DropdownField;
