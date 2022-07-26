@@ -1,6 +1,4 @@
-import { DropdownField } from './components/DropdownField';
-import { FavoriteButton } from './components/FavoriteButton';
-import { InputField } from './components/InputField';
+import { DropdownField, FavoriteButton, InputField } from './components';
 import logo from './logo.svg';
 
 function App() {
